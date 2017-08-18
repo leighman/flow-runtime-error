@@ -12,6 +12,7 @@
     "transform-runtime",
     "syntax-flow",
     "transform-flow-strip-types",
+    ["flow-runtime"],
   ],
   "env": {
     "test": {
