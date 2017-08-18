@@ -1,11 +1,11 @@
 // @flow
 
-import type {IdMap, Invoice, InvoicingState, Payment} from './types'
+import type {Invoice, InvoicingState, Payment} from './types'
 
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-const toIdMap = <T>(idName: string, xs: Array<T>): IdMap<T> => {
+const toIdMap = <T>(idName: string, xs: Array<T>): {[string]: T} => {
   const obj = {}
   for (let i = 0; i < xs.length; i++) {
     const id = (xs: Array<any>)[i][idName]

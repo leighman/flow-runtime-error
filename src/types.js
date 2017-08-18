@@ -1,9 +1,5 @@
 // @flow
 
-export type IdMap<T> = {
-  [id: string]: T,
-}
-
 export type Payment = {
   payment_id: string,
   invoice_id: string,
@@ -11,9 +7,13 @@ export type Payment = {
 
 export type Invoice = {
   invoice_id: string,
-  payments?: IdMap<Payment>,
+  payments?: {
+    [string]: Payment,
+  },
 }
 
 export type InvoicingState = {
-  invoices: IdMap<Invoice>,
+  invoices: {
+    [string]: Invoice,
+  },
 }
